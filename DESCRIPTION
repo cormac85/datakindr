@@ -17,5 +17,6 @@ Imports: tidyr,
     magrittr,
     stringr,
     xml2,
-    rjstat
+    rjstat,
+    ggplot2
 RoxygenNote: 6.0.1
