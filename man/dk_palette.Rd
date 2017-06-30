@@ -6,7 +6,8 @@
 \title{DataKind Recommended Palette}
 \format{A list of strings, each is a colour hex code.
 \describe{
-  \item{dk_palette}{list of datakind colour hex codes}
+  \item{dk_palette}{List of datakind colour hex codes.}
+  \item{colours:}{("#404040", "#FF6600", "#804D00", "#FF9900", "#FFFFFF", "#EEEEDD")}
 }}
 \usage{
 dk_palette
