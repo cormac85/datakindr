@@ -5,12 +5,12 @@
 #'
 #' @format A list of strings, each is a colour hex code.
 #' \describe{
-#'   \item{datakind_palette}{list of datakind colour hex codes}
+#'   \item{dk_palette}{list of datakind colour hex codes}
 #' }
-"datakind_palette"
+"dk_palette"
 
 #                  (V Dark Grey,  orange,   brown,    yellow,   white,     cream-ish)
-# datakind_palette <- c("#404040", "#FF6600", "#804D00", "#FF9900", "#FFFFFF", "#EEEEDD")
+# dk_palette <- c("#404040", "#FF6600", "#804D00", "#FF9900", "#FFFFFF", "#EEEEDD")
 #
-# devtools::use_data(datakind_palette, overwrite= TRUE)
+
 
