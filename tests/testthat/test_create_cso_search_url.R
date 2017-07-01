@@ -1,6 +1,6 @@
 context("Creating search URL")
 
-test_that("search URL is correctly created with 1 valid string argument", {
+test_that("search URL is correctly created with different types of inputs.", {
   expect_identical(create_cso_search_url("garda", 0),
                    "http://www.cso.ie/px/pxeirestat/statire/search2003/searchresult.asp?place=statbank&Planguage=0&searchin=1&searchtext=garda&forward=true&offset=0&showand=true")
   expect_identical(create_cso_search_url("garda 2012", 0),

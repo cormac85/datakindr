@@ -20,10 +20,9 @@ get_num_search_results <- function(search_term){
     as.numeric()
 
   #  Handling NA when no result returned.
-  if(is.na(res)) {
+  if (is.na(res)) {
     0
   } else {
     res
   }
-
 }

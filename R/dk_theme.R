@@ -94,5 +94,3 @@
 #   labs(title = "Some Data (2011)",
 #        x = "Range", y = "Value") +
 #   dk_theme
-
-

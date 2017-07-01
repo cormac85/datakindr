@@ -7,11 +7,11 @@
 #'
 
 create_cso_search_url <- function(search_term, offset){
-  if(search_term == ""){
+  if (search_term == ""){
     stop("No search term supplied.")
   }
 
-  if(offset < 0){
+  if (offset < 0){
     stop("Can't have a negative offset.")
   }
 

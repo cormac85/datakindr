@@ -13,5 +13,3 @@
 #                  (V Dark Grey,  orange,   brown,    yellow,   white,     cream-ish)
 # dk_palette <- c("#404040", "#FF6600", "#804D00", "#FF9900", "#FFFFFF", "#EEEEDD")
 #
-
-

@@ -9,7 +9,7 @@
     datakindr.desc = list()
   )
   toset <- !(names(op.datakindr) %in% names(op))
-  if(any(toset)) options(op.datakindr[toset])
+  if (any(toset)) options(op.datakindr[toset])
 
   invisible()
 }
