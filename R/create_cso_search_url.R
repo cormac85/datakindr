@@ -7,6 +7,14 @@
 #'
 
 create_cso_search_url <- function(search_term, offset){
+  if(search_term == ""){
+    stop("No search term supplied.")
+  }
+
+  if(offset < 0){
+    stop("Can't have a negative offset.")
+  }
+
   request_part_1 <- "http://www.cso.ie/px/pxeirestat/statire/search2003/searchresult.asp?place=statbank&Planguage=0&searchin=1&searchtext="
   request_part_2 <- "&forward=true&offset="
   request_part_3 <- "&showand=true"
