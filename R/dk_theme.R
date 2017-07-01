@@ -51,6 +51,10 @@
 #                        strip.background =
 #                          ggplot2::element_rect(dk_palette[5]),
 #                        legend.title.align = 0.5,
+#                        legend.title = element_text(colour = dk_palette[1],
+#                                                    size = rel(0.8)),
+#                        legend.text = element_text(colour = dk_palette[1],
+#                                                   size = rel(0.8)),
 #                        strip.text =
 #                          ggplot2::element_text(colour = dk_palette[1],
 #                                                size = ggplot2::rel(1),
@@ -90,5 +94,5 @@
 #   labs(title = "Some Data (2011)",
 #        x = "Range", y = "Value") +
 #   dk_theme
-#
+
 
