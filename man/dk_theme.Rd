@@ -19,13 +19,24 @@ and easier. Just add "+ dk_theme" when building your plot layers.
 }
 \examples{
 ggplot2::ggplot(data.frame( y = runif(100, min = 0, max = 20) +
-seq(1, 100, 1),
-x = seq(1, 100, 1),
-z = rep_len(c("a", "b", "c", "d"), 100)),
-ggplot2::aes(x, y, colour = z, fill = z)) +
+  seq(1, 100, 1),
+  x = seq(1, 100, 1),
+  z = rep_len(c("a", "b", "c", "d"), 100)),
+  ggplot2::aes(x, y, colour = z, fill = z)) +
   ggplot2::geom_point() +
   ggplot2::facet_wrap(~z, nrow = 2) +
   ggplot2::geom_smooth(se = TRUE) +
+  abs(title = "Some Data (2011)",
+      x = "Range", y = "Value") +
+  dk_theme
+
+gplot2::ggplot(data.frame( x = c('Primary 1', 'Primary 2',
+                                 'Secondary 1', 'Secondary 2'),
+                           y = runif(4, 10, 100)),
+               ggplot2::aes(x,y, fill = x)) +
+  ggplot2::geom_bar(stat = "identity") +
+  ggplot2::labs(title = "Some Data (2011)",
+                x = "Range", y = "Value") +
   dk_theme
 }
 \keyword{datasets}

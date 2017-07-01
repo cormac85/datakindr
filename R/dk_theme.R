@@ -11,35 +11,46 @@
 #' }
 #' @examples
 #' ggplot2::ggplot(data.frame( y = runif(100, min = 0, max = 20) +
-#' seq(1, 100, 1),
-#' x = seq(1, 100, 1),
-#' z = rep_len(c("a", "b", "c", "d"), 100)),
-#' ggplot2::aes(x, y, colour = z, fill = z)) +
+#'   seq(1, 100, 1),
+#'   x = seq(1, 100, 1),
+#'   z = rep_len(c("a", "b", "c", "d"), 100)),
+#'   ggplot2::aes(x, y, colour = z, fill = z)) +
 #'   ggplot2::geom_point() +
 #'   ggplot2::facet_wrap(~z, nrow = 2) +
 #'   ggplot2::geom_smooth(se = TRUE) +
+#'   abs(title = "Some Data (2011)",
+#'       x = "Range", y = "Value") +
 #'   dk_theme
-
+#'
+#' gplot2::ggplot(data.frame( x = c('Primary 1', 'Primary 2',
+#'                                  'Secondary 1', 'Secondary 2'),
+#'                            y = runif(4, 10, 100)),
+#'                ggplot2::aes(x,y, fill = x)) +
+#'   ggplot2::geom_bar(stat = "identity") +
+#'   ggplot2::labs(title = "Some Data (2011)",
+#'                 x = "Range", y = "Value") +
+#'   dk_theme
 "dk_theme"
 
 #
 # dk_theme <-
 #   list (ggplot2::theme(plot.title =
-#                          ggplot2::element_text(face = 2, size = rel(1.2),
+#                          ggplot2::element_text(face = 2, size = rel(1),
 #                                                hjust = 0,
 #                                                colour = dk_palette[1]),
 #                        axis.title =
 #                          ggplot2::element_text(colour = dk_palette[1],
-#                                                size = rel(1)),
+#                                                size = rel(0.8)),
 #                        axis.text =
 #                          ggplot2::element_text(colour = dk_palette[1],
 #                                                size = rel(0.8)),
 #                        axis.text.x =
-#                          ggplot2::element_text(hjust = 1, vjust = 1,
+#                          ggplot2::element_text(vjust = 1,
 #                                                angle = 0),
 #                        axis.line = element_line(colour = dk_palette[1]),
 #                        strip.background =
 #                          ggplot2::element_rect(dk_palette[5]),
+#                        legend.title.align = 0.5,
 #                        strip.text =
 #                          ggplot2::element_text(colour = dk_palette[1],
 #                                                size = ggplot2::rel(1),
@@ -65,7 +76,19 @@
 #   geom_point() +
 #   facet_wrap(~z, nrow = 2) +
 #   geom_smooth(se = TRUE) +
+#   labs(title = "Some Data (2011)",
+#   x = "Range", y = "Value") +
+#   labs(title = "Some Data (2011)",
+#        x = "Range", y = "Value") +
 #   dk_theme
+#
+# ggplot2::ggplot(data.frame( x = c('Primary 1', 'Primary 2',
+#                                   'Secondary 1', 'Secondary 2'),
+#                             y = runif(4, 10, 100)),
+#                 aes(x,y, fill = x)) +
+#   geom_bar(stat = "identity") +
+#   labs(title = "Some Data (2011)",
+#        x = "Range", y = "Value") +
+#   dk_theme
+#
 
-# #+ scale_colour_manual(values = c("blue", "red", "orange", "black", "green", "yellow")) +
-# # scale_fill_manual(values = c("blue", "red", "orange", "black", "green", "yellow"))
