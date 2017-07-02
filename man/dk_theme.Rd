@@ -30,7 +30,7 @@ ggplot2::ggplot(data.frame( y = runif(100, min = 0, max = 20) +
       x = "Range", y = "Value") +
   dk_theme
 
-gplot2::ggplot(data.frame( x = c('Primary 1', 'Primary 2',
+ggplot2::ggplot(data.frame( x = c('Primary 1', 'Primary 2',
                                  'Secondary 1', 'Secondary 2'),
                            y = runif(4, 10, 100)),
                ggplot2::aes(x,y, fill = x)) +
