@@ -1,5 +1,5 @@
 [![Travis-CI Build Status](https://travis-ci.org/cormac85/datakindr.svg?branch=master)](https://travis-ci.org/cormac85/datakindr)
-
+[![codecov.io](https://codecov.io/github/cormac85/datakindr/coverage.svg?branch=master)](https://codecov.io/github/cormac85/datakindr?branch=master)
 # datakindr
 A set of tools in R for use by DataKind
 
