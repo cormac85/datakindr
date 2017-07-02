@@ -7,7 +7,10 @@ Authors@R: person("Cormac", "Nolan", email = "cormacnolan85@gmail.com",
     role = c("aut", "cre"))
 Maintainer: Cormac Nolan <cormacnolan85@gmail.com>
 Description: Provides tools, utilities, data and more for use by the DataKind
-    Dublin team.
+    Dublin team. Including a convenient interface to CSO.ie's Statbank and a
+    ggplot2 theme and colour palette for convenient & consistent visualisation
+    styles.
+Depends: R (>= 3.3.1)
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true

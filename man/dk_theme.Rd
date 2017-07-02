@@ -26,7 +26,7 @@ ggplot2::ggplot(data.frame( y = runif(100, min = 0, max = 20) +
   ggplot2::geom_point() +
   ggplot2::facet_wrap(~z, nrow = 2) +
   ggplot2::geom_smooth(se = TRUE) +
-  abs(title = "Some Data (2011)",
+  ggplot2::labs(title = "Some Data (2011)",
       x = "Range", y = "Value") +
   dk_theme
 
