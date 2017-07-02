@@ -1,4 +1,4 @@
-.onLoad <- function(libname, pkgname) {
+.onLoad <- function(libname, pkgname) { # nocov start
   op <- options()
   op.datakindr <- list(
     datakindr.install.args = "",
@@ -12,4 +12,4 @@
   if (any(toset)) options(op.datakindr[toset])
 
   invisible()
-}
+} #nocov end
