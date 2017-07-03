@@ -5,7 +5,6 @@ test_that("dataframe is correctly returned from Statbank", {
                 "rjstat::fromJSONstat",  # What
                 readRDS("./mocked_data/sample_statbank_dataset.rds")) # How
   expect_is(get_cso_dataset("ASR11"), "data.frame")
-  expect_is(get_cso_dataset("ASR11")$sex, "character")
-
-  blah <- rjstat::fromJSONstat(readLines(paste0(cso_base_url, cso_dataset_code)))
+  expect_is(get_cso_dataset("ASR11")[[1]], "character")
+  expect_length(get_cso_dataset("ASR11"), 5)
 })
