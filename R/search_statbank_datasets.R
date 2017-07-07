@@ -14,6 +14,7 @@
 search_statbank_datasets <- function(search_term, max_num_results = 500){
   offset <- 0
   results_per_page <- 15
+  node_name <- ""
   num_results <- get_num_search_results(search_term)
   validate_search_term(search_term, num_results, max_num_results)
   search_offsets <- seq(0, num_results, results_per_page)
@@ -27,8 +28,20 @@ search_statbank_datasets <- function(search_term, max_num_results = 500){
     req <- create_cso_search_url(search_term, offset)
     res <- get_httr_html_content(req)
 
-    combined_dataset_names[current_index] <-
-      parse_node_text(res, ".SearchHeadCell")
+    is_mainref_class_present <-
+      (res %>% parse_node_text(".mainref"))[[1]] %>% length()
+
+    if(is_mainref_class_present == 0) {
+      node_name <- ".SearchHeadCell"
+      combined_dataset_names[current_index] <-
+        parse_node_text(res, node_name)
+    } else {
+      node_name <- ".mainref"
+      combined_dataset_names[current_index] <-
+        (parse_node_text(res, node_name)[[1]] %>%
+        stringi::stri_trim_both())[1]
+    }
+
   }
   search_results_to_dataframe(combined_dataset_names)
 }
