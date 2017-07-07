@@ -7,9 +7,9 @@
 #' @importFrom magrittr %>% %<>%
 #'
 
-get_httr_html_content <- function(request) {
+get_httr_html_content <- function(request, content_encoding = "ISO-8859-1") {
   request %>%
     httr::GET() %>%
-    httr::content("text", encoding = "ISO-8859-1") %>%
+    httr::content("text", encoding = content_encoding) %>%
     xml2::read_html()
 }
