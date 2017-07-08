@@ -22,5 +22,8 @@ Imports: tidyr,
     xml2,
     rjstat,
     ggplot2
-Suggests: testthat, mockery
+Suggests: testthat, mockery,
+    knitr,
+    rmarkdown
 RoxygenNote: 6.0.1
+VignetteBuilder: knitr
