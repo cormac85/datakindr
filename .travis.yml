@@ -2,7 +2,7 @@
 
 language: R
 sudo: false
-before_install:
+install:
   - R -e "0" --args --bootstrap-packrat
 cache:
   directories:
@@ -12,6 +12,7 @@ cache:
 
 r_packages:
     - covr
+    - knitr
 
 after_success:
     - Rscript -e 'library(covr); codecov()'
