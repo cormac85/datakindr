@@ -14,6 +14,9 @@ test_that("a single-word query term will return with correct format", {
   expect_is(test_result, "data.frame")
   expect_length(test_result, 2)
   expect_length(test_result[[1]], 90)
+  expect_equal(test_result$dataset_code[1], "A0518")
+  expect_equal(test_result$dataset_desc[1] %>% substr(1,23),
+               "1996 Population Aged 15")
 })
 
 test_that("a multiple-word query term will return with correct format", {

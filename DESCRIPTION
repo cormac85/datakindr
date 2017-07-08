@@ -21,7 +21,6 @@ Imports: tidyr,
     stringr,
     xml2,
     rjstat,
-    ggplot2,
-    stringi
+    ggplot2
 Suggests: testthat, mockery
 RoxygenNote: 6.0.1

@@ -10,13 +10,32 @@
 #' \itemize{
 #' \item{\code{search_statbank_datasets()} returns a data frame with dataset
 #' codes and a description of the dataset to which each code refers.}
-#' \item{Once you've found the dataset you need (either from the Statbank website, or
-#' by using \code{search_statbank_datasets()}) you can use
+#' \item{Once you've found the dataset you need (either from the Statbank website,
+#' or by using \code{search_statbank_datasets()}) you can use
 #' \code{get_cso_dataset()} to retrieve the dataset as a data.frame.}
 #' }
 #' @section Datakindr Plotting:
-#' Blah blah blah
+#' A number of convenience objects have been provided as part of this package
+#' to make creating consistent visualisations when using ggplot2.
+#' \describe{
+#' \item{\code{dk_theme}}{ggplot2 theme object that can be used as a
+#' starting point when creating visualisations for Datakind to create a
+#' consistent look and feel.}
+#' \item{\code{dk_palette}}{Main 4-colour palette. Comes bundled with
+#' \code{dk_theme}.}
+#' \item{\code{dk_sequential_palette}}{Extended 7-colour palette for use
+#' with sequential data series.}
+#' \item{\code{dk_non_sequential_palette}}{Extended 5-colour palette for use
+#' with \strong{non}-sequential data series.}
+#' }
 #'
+#' @examples
+#' # Querying CSO.ie Statbank
+#' \dontrun{
+#' dataset_names <- search_statbank_datasets("garda")
+#' garda_dataset <- get_cso_dataset(dataset_names$dataset_code[1])
+#' View(garda_dataset)
+#' }
 #'
 #' @docType package
 #' @name datakindr
