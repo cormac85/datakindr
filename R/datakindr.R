@@ -37,6 +37,31 @@
 #' View(garda_dataset)
 #' }
 #'
+#' \dontrun{
+#' # Use of ggplot2 theme and datakind palette:
+#' ggplot2::ggplot(data.frame( y = runif(100, min = 0, max = 20) +
+#'   seq(1, 100, 1),
+#'   x = seq(1, 100, 1),
+#'   z = rep_len(c("a", "b", "c", "d"), 100)),
+#'   ggplot2::aes(x, y, colour = z, fill = z)) +
+#'   ggplot2::geom_point() +
+#'   ggplot2::facet_wrap(~z, nrow = 2) +
+#'   ggplot2::geom_smooth(se = TRUE) +
+#'   ggplot2::labs(title = "Some Data (2011)",
+#'       x = "Range", y = "Value") +
+#'   dk_theme
+#'
+#' ggplot2::ggplot(data.frame( x = c('Primary 1', 'Primary 2',
+#'                                  'Secondary 1', 'Secondary 2',
+#'                                  "even", "more", "colours"),
+#'                            y = runif(7, 10, 100)),
+#'                ggplot2::aes(x,y, fill = x)) +
+#'  ggplot2::geom_bar(stat = "identity") +
+#'  ggplot2::labs(title = "Some Data (2011)",
+#'                x = "Range", y = "Value") +
+#'  dk_theme +
+#'  ggplot2::scale_fill_manual(values = dk_sequential_palette)
+#' }
 #' @docType package
 #' @name datakindr
 NULL
