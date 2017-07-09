@@ -2,6 +2,7 @@ Package: datakindr
 Type: Package
 Title: Tools And Utilities for DataKind
 Version: 0.1.0
+Date: 2017-07-09
 Author: Cormac Nolan
 Authors@R: person("Cormac", "Nolan", email = "cormacnolan85@gmail.com",  
     role = c("aut", "cre"))
