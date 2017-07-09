@@ -10,8 +10,6 @@ cache:
     - $TRAVIS_BUILD_DIR/packrat/lib
   packages: true
 
-r_check_args: "--no-vignettes"
-
 r_packages:
     - covr
 
