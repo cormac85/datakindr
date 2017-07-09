@@ -2,7 +2,7 @@
 
 language: R
 sudo: false
-install:
+before_install:
   - R -e "0" --args --bootstrap-packrat
 cache:
   directories:
