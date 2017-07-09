@@ -25,6 +25,7 @@ Imports: tidyr,
     ggplot2
 Suggests: testthat,
     mockery,
-    rmarkdown
+    rmarkdown,
+    dplyr
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
