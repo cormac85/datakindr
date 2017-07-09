@@ -10,9 +10,10 @@ cache:
     - $TRAVIS_BUILD_DIR/packrat/lib
   packages: true
 
+r_check_args: "--no-vignettes"
+
 r_packages:
     - covr
-    - knitr
 
 after_success:
     - Rscript -e 'library(covr); codecov()'
