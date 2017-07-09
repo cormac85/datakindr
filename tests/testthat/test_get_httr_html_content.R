@@ -7,4 +7,3 @@ test_that("httr request is successfully parsed into xml document.", {
   test_results <- get_httr_html_content(create_cso_search_url("garda", 0))
   expect_is(test_results, "xml_document")
 })
-
