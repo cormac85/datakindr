@@ -11,8 +11,10 @@ r_binary_packages:
 
 r_packages:
     - covr
+    - RPushbullet
 
 after_success:
-    - Rscript -e 'library(covr); codecov()'
+    - Rscript -e 'library(covr); codecov();'
+    - Rscript -e 'library(RPushbullet); pbPost(type="note", title="blah", body="body", apikey = "${PB_KEY}", devices="${PB_DEV}")'
 
 
