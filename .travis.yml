@@ -11,8 +11,8 @@ cache:
   packages: true
 
 r_binary_packages:
-knitr
-rmarkdown
+    - knitr
+    - rmarkdown
 
 r_packages:
     - covr
