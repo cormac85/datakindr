@@ -21,9 +21,10 @@ Imports: tidyr,
     stringr,
     xml2,
     rjstat,
-    ggplot2
-Suggests: testthat, mockery,
     knitr,
+    ggplot2
+Suggests: testthat,
+    mockery,
     rmarkdown
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
