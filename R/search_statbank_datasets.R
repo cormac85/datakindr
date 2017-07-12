@@ -44,5 +44,5 @@ search_statbank_datasets <- function(search_term, max_num_results = 500){
            stringr::str_trim())[1]
     }
   }
-  search_results_to_dataframe(combined_dataset_names)
+  results_to_dataframe(combined_dataset_names)
 }

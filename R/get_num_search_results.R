@@ -19,22 +19,9 @@ get_num_search_results <- function(search_term){
   # Otherwise it's a seach results page
   if(is_mainref_class_present == 0) {
     # Try to get the number of search results
-    res <- tryCatch({
-      (res %>%
-          rvest::html_node(".fl") %>%
-          rvest::html_text() %>%
-          stringr::str_match("made (.*?) results"))[2] %>%
-        as.numeric()},
-      warning = function(w){
-        if (w$message == "NAs introduced by coercion"){
-          warning("Your search query did not return any results.")
-          res <- 0
-        } else {
-          warning(w$message) # otherwise just return the warning
-        }
-      })
+    num_results <- try_get_num_results(res)
   } else {
-    res <- 1 # it's a dataset page
+    num_results <- 1 # it's a dataset page
   }
-  res
+  num_results
 }
