@@ -3,7 +3,7 @@
 #' Uses a \code{tryCatch()} block to get the number of search results, and
 #' raises a warning when no results returned.
 #'
-#' @param res
+#' @param res \code{httr} response based on a Statbank search page.
 #'
 #' @return The number of search results from the Statbank webpage.
 #' @keywords internal

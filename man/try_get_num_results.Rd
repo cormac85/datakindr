@@ -7,7 +7,7 @@
 try_get_num_results(res)
 }
 \arguments{
-\item{res}{}
+\item{res}{\code{httr} response based on a Statbank search page.}
 }
 \value{
 The number of search results from the Statbank webpage.
