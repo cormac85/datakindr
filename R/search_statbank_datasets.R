@@ -23,26 +23,15 @@ search_statbank_datasets <- function(search_term, max_num_results = 500){
 
   # Store all the results from search term
   for (offset in search_offsets) {
-
     current_index <- (offset / results_per_page + 1)
     print(paste("Requesting", current_index, "out of", length(search_offsets)))
-    req <- create_cso_search_url(search_term, offset)
-    res <- get_httr_html_content(req)
 
-    is_mainref_class_present <-
-      (res %>% parse_node_text(".mainref"))[[1]] %>% length()
-
-    if(is_mainref_class_present == 0) {
-      node_name <- ".SearchHeadCell"
-      combined_dataset_names[current_index] <-
-        parse_node_text(res, node_name) %>%
-        lapply(stringr::str_trim)
-    } else {
-      node_name <- ".mainref"
-      combined_dataset_names[current_index] <-
-        (parse_node_text(res, node_name)[[1]] %>%
-           stringr::str_trim())[1]
-    }
+    combined_dataset_names[current_index] <-
+      create_cso_search_url(search_term, offset) %>%
+      get_httr_html_content() %>%
+      parse_results_page()
   }
   results_to_dataframe(combined_dataset_names)
 }
+
+
